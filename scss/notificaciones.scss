@@ -1,0 +1,36 @@
+@mixin notification {
+    width: 99%;
+    height: 35px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.2em;
+    font-family: Verdana;
+    border-radius: 3px;
+    margin: 10px;
+    // 1. Utilizacion de la directiva @content
+    @content;
+}
+
+.error {
+    // 1.
+    @include notification {
+        background-color: DarkRed;
+        color: white;
+        border: 1px solid LightSlateGray;
+    }
+}
+
+.success {
+    // 1.
+    @include notification {
+        background-color: MediumSeaGreen;
+        color: MintCream;
+        border: 1px solid LightSalmon;
+    }
+}
+
+// 1. Estilo especifico para el p interno a .success
+.success p {
+    color: purple;
+    background-color: aqua;
+}

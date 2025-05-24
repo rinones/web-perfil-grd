@@ -1,0 +1,83 @@
+.localizacion-ghana {
+  background-image: url("/IMAGES/ghana.jpg");
+  background-repeat: no-repeat;
+  height: 225px;
+  width: 400px;
+  background-size: cover;
+}
+
+.localizacion-japan {
+  background-image: url("/IMAGES/japan.jpg");
+  background-repeat: no-repeat;
+  height: 225px;
+  width: 400px;
+  background-size: cover;
+}
+
+.localizacion-uae {
+  background-image: url("/IMAGES/uae.jpg");
+  background-repeat: no-repeat;
+  height: 225px;
+  width: 400px;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+.container .page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+.container .item {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.container .item .content {
+  display: flex;
+}
+.container .item .content .metadata {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.container .item .content .metadata .title {
+  margin: 0px;
+}
+.container .item .btn-group {
+  display: flex;
+  align-items: center;
+}
+.container .item .btn-group .button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 42px;
+  font-size: 2em;
+}
+.container .item .btn-group .button a {
+  color: green;
+  text-decoration: none;
+}
+.container .item .btn-group .button:hover {
+  background-color: maroon;
+  cursor: pointer;
+}
+.container .item .btn-group .button:hover a {
+  color: white;
+}
+@media (max-width: 48em) {
+  .container .page-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+  }
+}

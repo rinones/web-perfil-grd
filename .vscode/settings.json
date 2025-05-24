@@ -1,0 +1,31 @@
+{
+    "liveSassCompile.settings.compileOnWatch": false,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.useNewCompiler": true,
+    "liveSassCompile.settings.showOutputWindowOn": "Warning",
+    "liveSassCompile.settings.formats": [
+        {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "/css",
+          "generateMap": false
+        },
+        {
+            "format": "compressed",
+            "extensionName": "-min.css",
+            "savePath": "/css",
+            "generateMap": false
+        }
+    ],
+    
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.gitattributes": true,
+        ".gitattributes": true
+    },
+    "explorerExclude.backup": {}
+}

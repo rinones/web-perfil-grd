@@ -1,0 +1,56 @@
+$paragraph-align: justify;
+// 1. Se define el valor por deseado para el color del texto
+$main-title-color: #097070;
+$link-color: #c94a1c;
+
+@mixin heading-feature-styling {
+  // 1.Se define el valor por defecto en caso de que no se defina o falle la asignación externa al mixin
+  $main-title-color: DarkBlue !default;
+  color: $main-title-color;
+}
+
+// 2. Se extrae una porción de codigo
+// 4. Se puede pasar un valor de argumento al mixin
+@mixin page-header-link-styling($link-color: rgb(247, 14, 14)) {
+  @include heading-feature-styling;
+  // 3. Se especifica el color de una sección
+  .subheading {
+    color: #790606;
+    font-weight: bold;
+    // 5. El mixin se llama con un argumento
+    p {
+      @include paragraph-feature-styling("");
+    }
+    // 3.
+    .subheading-link a {
+      // 4. Se utiliza el valor del argumento
+      color: $link-color;
+      text-decoration: none;
+
+      // 6. Selector sudo dentro nesting
+      &:hover {
+        text-decoration: underline;
+        color: purple;
+      }
+    }
+  }
+}
+
+// 5. El mixin se define con un argumento de entrada que servira para ejecutar el condicional
+@mixin paragraph-feature-styling($bg-color) {
+  @if $bg-color == "dark" {
+    background-color: #333;
+    color: #fff;
+  } @else if $bg-color == "light" {
+    background-color: #fff;
+    color: #333;
+  } @else {
+    background-color: #10cee7;
+    color: #e912cc;
+  }
+}
+
+// 2. Se llama al mixin donde se extrajo la porción de código
+.page-header {
+  @include page-header-link-styling;
+}
