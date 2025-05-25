@@ -1,0 +1,102 @@
+body {
+    margin: 0px;
+}
+
+html {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.navbar {
+    background: coral;
+
+    div {
+        display: none;
+    }
+
+    .toogle,
+    .brand {
+        display: inline-block;
+    }
+
+
+    .link {
+        display: block;
+        text-align: center;
+        padding: 1em;
+        text-decoration: none;
+        background: darkblue;
+        color: whitesmoke;
+    }
+
+    .link:hover,
+    .link:active {
+        background: whitesmoke;
+        color: darkblue;
+    }
+
+    .brand {
+        width: 10em;
+        text-align: center;
+        padding: 1em;
+        color: whitesmoke;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .toogle {
+        padding: 1em;
+        color: black;
+    }
+
+}
+
+@media (min-width: 48em) {
+    .navbar {
+        display: flex;
+
+        div {
+            display: flex;
+        }
+
+        .left,
+        .right {
+            display: flex;
+            flex: 1;
+        }
+
+        .link {
+            width: auto;
+        }
+
+        .right {
+            justify-content: flex-end;
+        }
+
+        .toogle {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 48em) {
+    .navbar.active {
+        .toogle {
+            background: darkblue;
+            color: whitesmoke;
+        }
+
+        div {
+            display: block;
+        }
+
+    }
+
+    .navbar {
+        .brand {
+            text-align: left;
+        }
+    }
+}
