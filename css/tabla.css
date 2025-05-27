@@ -1,5 +1,5 @@
 .localizacion-ghana {
-  background-image: url("/IMAGES/ghana.jpg");
+  background-image: url("/images/ghana.jpg");
   background-repeat: no-repeat;
   height: 225px;
   width: 400px;
@@ -7,7 +7,7 @@
 }
 
 .localizacion-japan {
-  background-image: url("/IMAGES/japan.jpg");
+  background-image: url("/images/japan.jpg");
   background-repeat: no-repeat;
   height: 225px;
   width: 400px;
@@ -15,7 +15,23 @@
 }
 
 .localizacion-uae {
-  background-image: url("/IMAGES/uae.jpg");
+  background-image: url("/images/uae.jpg");
+  background-repeat: no-repeat;
+  height: 225px;
+  width: 400px;
+  background-size: cover;
+}
+
+.localizacion-mexico {
+  background-image: url("/images/mexico.jpg");
+  background-repeat: no-repeat;
+  height: 225px;
+  width: 400px;
+  background-size: cover;
+}
+
+.localizacion-beint {
+  background-image: url("/images/beint.jpg");
   background-repeat: no-repeat;
   height: 225px;
   width: 400px;

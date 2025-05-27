@@ -1,10 +1,10 @@
 // 2. Se define una lista de elementos sobre lso que se interpola para aplicar estilos a clases con nombres diferentes pero diseños similares
-$locations: ghana, japan, uae;
+$locations: ghana, japan, uae, mexico, beint;
 
 // 2.
 @each $location in $locations {
     .localizacion-#{$location} {
-        background-image: url('/IMAGES/#{$location}.jpg');
+        background-image: url('/images/#{$location}.jpg');
         background-repeat: no-repeat;
         height: 225px;
         width: 400px;
