@@ -1,0 +1,303 @@
+// Variables
+$primary-font: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 11px;
+$font-size-name: 18px;
+$font-size-section: 13px;
+$font-size-job-title: 11px;
+$line-height: 1.4;
+$margin-section: 16px;
+$margin-job: 10px;
+$margin-list: 6px;
+$text-color: #2c3e50;
+$text-color-light: #5d6d7e;
+$accent-color: #34495e;
+$border-color: #ecf0f1;
+$background-color: #fff;
+$shadow-subtle: 0 1px 3px rgba(0,0,0,0.05);
+
+// Reset básico
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    font-size: $font-size-base;
+    line-height: $line-height;
+    color: $text-color;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 30px 20px;
+}
+
+.cv-container {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: white;
+    box-shadow: $shadow-subtle;
+    border-radius: 4px;
+    padding: 40px;
+    
+    .cv-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $border-color;
+        
+        .name {
+            font-size: $font-size-name;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            color: $accent-color;
+        }
+        
+        .contact-info {
+            font-size: $font-size-base;
+            color: $text-color-light;
+            
+            .separator {
+                margin: 0 8px;
+                color: $border-color;
+            }
+            
+            .phone, .email, .location {
+                font-weight: normal;
+                transition: color 0.2s ease;
+                
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+    
+    .cv-content {
+        .experience-section, .languages-section {
+            margin-bottom: $margin-section;
+            
+            .section-title {
+                font-size: $font-size-section;
+                font-weight: 600;
+                margin-bottom: 12px;
+                text-align: left;
+                color: $accent-color;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                position: relative;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 30px;
+                    height: 2px;
+                    background-color: $accent-color;
+                }
+            }
+        }
+        
+        .job {
+            margin-bottom: $margin-job;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba($border-color, 0.5);
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .job-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 4px;
+                
+                .job-title {
+                    font-size: $font-size-job-title;
+                    font-weight: 600;
+                    flex: 1;
+                    margin-right: 10px;
+                    color: $accent-color;
+                }
+                
+                .job-period {
+                    font-size: $font-size-job-title;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    color: $text-color-light;
+                    background-color: rgba($border-color, 0.3);
+                    padding: 2px 8px;
+                    border-radius: 12px;
+                    font-size: 10px;
+                }
+            }
+            
+            .company-location {
+                font-size: $font-size-base;
+                margin-bottom: 8px;
+                color: $text-color-light;
+                font-style: italic;
+                
+                .company {
+                    font-weight: 500;
+                    color: $text-color;
+                }
+                
+                .separator {
+                    margin: 0 6px;
+                }
+                
+                .location {
+                    font-weight: normal;
+                }
+            }
+            
+            .job-responsibilities {
+                list-style: none;
+                margin-left: 0;
+                margin-bottom: $margin-list;
+                
+                li {
+                    font-size: $font-size-base;
+                    margin-bottom: 4px;
+                    text-align: justify;
+                    padding-left: 20px;
+                    position: relative;
+                    
+                    &::before {
+                        content: '▸';
+                        position: absolute;
+                        left: 0;
+                        color: $accent-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+            
+            .reports, .inspections {
+                margin-top: 8px;
+                background-color: rgba($border-color, 0.2);
+                padding: 8px 12px;
+                border-radius: 4px;
+                border-left: 3px solid $accent-color;
+                
+                .reports-title, .inspections-title {
+                    font-size: $font-size-base;
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                    color: $accent-color;
+                }
+                
+                .reports-list, .inspections-list {
+                    list-style: none;
+                    margin-left: 0;
+                    
+                    li {
+                        font-size: $font-size-base;
+                        margin-bottom: 3px;
+                        text-align: justify;
+                        padding-left: 16px;
+                        position: relative;
+                        
+                        &::before {
+                            content: '•';
+                            position: absolute;
+                            left: 0;
+                            color: $accent-color;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .languages-section {
+            .languages-list {
+                font-size: $font-size-base;
+                font-weight: 500;
+                color: $text-color-light;
+                background-color: rgba($border-color, 0.3);
+                padding: 8px 16px;
+                border-radius: 20px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// Media queries para responsive
+@media print {
+    body {
+        padding: 0;
+        background-color: white;
+    }
+    
+    .cv-container {
+        max-width: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+        
+        .cv-header {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .cv-container {
+        .cv-header {
+            .name {
+                font-size: 14px;
+            }
+            
+            .contact-info {
+                font-size: 10px;
+                line-height: 1.4;
+            }
+        }
+        
+        .cv-content {
+            .job {
+                .job-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    
+                    .job-title {
+                        margin-right: 0;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Estilos específicos para mantener la consistencia del diseño original
+.cv-container {
+    .job:last-child {
+        margin-bottom: 0;
+    }
+    
+    // Espaciado específico para diferentes tipos de entradas
+    .job {
+        &:nth-child(1), &:nth-child(2) {
+            // Estudios actuales - menos espaciado inferior
+            margin-bottom: 6px;
+        }
+    }
+    
+    // Ajustes para texto justificado en listas
+    .job-responsibilities li,
+    .reports-list li,
+    .inspections-list li {
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+}
