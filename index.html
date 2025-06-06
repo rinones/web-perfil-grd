@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css">
-
-    
+    <title>Gonzalo Riñones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/navbar.js" defer></script>
 </head>
 
 <body>
@@ -36,7 +38,17 @@
             </div>
         </div>
     </div>
-
+    <script src="js/include.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navHamburguer = document.querySelector('#navHamburguer');
+            if (navHamburguer) {
+                navHamburguer.addEventListener('click', (e) => {
+                    navHamburguer.parentElement.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
