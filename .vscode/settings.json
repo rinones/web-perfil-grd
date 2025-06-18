@@ -10,12 +10,12 @@
           "savePath": "/css",
           "generateMap": false
         },
-        {
-            "format": "compressed",
-            "extensionName": "-min.css",
-            "savePath": "/css",
-            "generateMap": false
-        }
+        // {
+        //     "format": "compressed",
+        //     "extensionName": "-min.css",
+        //     "savePath": "/css",
+        //     "generateMap": false
+        // }
     ],
     
     "files.exclude": {
